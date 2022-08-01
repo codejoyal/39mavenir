@@ -1,7 +1,7 @@
 Observation (delete the Pods one by one (first voting Pod, then worker pod, then db pod) and see what happens to the voting and result app after deleting):
 -- Deleted the voting pod: voting pod auto created by deployment. voting and result app were working.
 -- Deleted the worker pod: wworker pod auto created by deployment. voting and result app were working.
--- Deleted the db pod: voting pod auto created. voting and result app were reachable but data is not showing in result app. Also it was observed that worker pod restarted after db was restarted. Since the DB is not backed up, we cannot restore it.
+-- Deleted the db pod: db pod auto created. voting and result app were reachable but data is not showing in result app. Also it was observed that worker pod restarted after db was restarted. Since the DB is not backed up, we cannot restore it.
 -- DB pod data mount wath was not available in worker node after db restart.
 -- result pod was restarted. voting and result app were working.
 
